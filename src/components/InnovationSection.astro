@@ -1,0 +1,62 @@
+---
+import Section2 from './Section2.astro';
+---
+
+<Section2 color="white">
+  <div
+    slot="main"
+    class="text-gray-200 flex flex-col items-center justify-center"
+  >
+    <div
+      class="flex flex-col xl:flex-row items-center justify-center w-4/5 xl:w-3/4 gap-12"
+    >
+      <div
+        class="flex flex-col gap-4 2xl:gap-12 order-2 max-w-6xl justify-center items-center xl:pt-12"
+      >
+        <div class="flex flex-col gap-2 xl:gap-4">
+          <h2
+            class="text-[30px] xl:text-[40px] font-bold tracking-widest text-gray-300"
+          >
+            INNOVACIÓN
+          </h2>
+          <p class="2xl:text-xl">
+            Este mando asimétrico ofrece características revolucionarias para
+            mejorar tu precisión y rendimiento en el juego. Equipado con
+            joysticks y gatillos dotados de tecnología <a
+              class="underline"
+              href="">Hall Effect</a
+            >, ofrece además las mejores opciones de personalización.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-2 xl:gap-4">
+          <h2
+            class="text-[30px] xl:text-[40px] font-bold tracking-widest text-gray-300"
+          >
+            NEXTGEN
+          </h2>
+          <p class="2xl:text-xl">
+            Diseñado para jugadores profesionales en busca de rendimiento.
+            Supera todas las expectativas con su tecnología optimizada para la
+            PS5. Disfruta de una interfaz de configuración enriquecida, un
+            diseño modular mejorado y ergonómico, todo envuelto en materiales de
+            primera calidad para un confort incomparable.
+          </p>
+        </div>
+      </div>
+
+      <img
+        class="object-cover sm:max-w-sm lg:max-w-md xl:max-w-xl order-1 pl-8"
+        src="/innovationsection.png"
+        ''
+        alt="Mando Revolution 5 PRO"
+      />
+    </div>
+  </div>
+
+  <div
+    slot="background"
+    class="bg-gradient-to-r from-zinc-950 to-zinc-800 object-center object-cover h-full w-full"
+  >
+  </div>
+</Section2>

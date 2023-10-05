@@ -6,16 +6,29 @@ import Section from './Section.astro';
   title="El primer mando Revolution Pro compatible con..."
   subtitle=""
   color="black"
+  pt="pt-40"
+  textSize="text-[40px]"
 >
-  <div slot="main" class="flex justify-center items-center pl-5">
-    <img src="/testingrepo/ps5ps4pc.png" alt="Compatible con PS5, PS4 y PC" />
-  </div>
-
-  <div slot="footer" class="flex flex-col items-center justify-center">
+  <div slot="main" class="flex justify-center items-center flex-col">
     <img
+      class="pl-5"
+      src="/testingrepo/ps5ps4pc.png"
+      alt="Compatible con PS5, PS4 y PC"
+    />
+    <img
+      class="md:max-w-md lg:max-w-lg xl:max-w-2xl"
       src="/testingrepo/revolution5pro_frontal.png"
       alt="Mando Revolution 5 PRO"
     />
+  </div>
+
+  <div slot="footer" class="pb-10">
+    <a
+      class="border-[3px] border-black font-bold backdrop-blur-sm text-sm rounded text-black px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors"
+      href="#"
+    >
+      COMPRAR AHORA</a
+    >
   </div>
 
   <div

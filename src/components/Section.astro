@@ -1,5 +1,5 @@
 ---
-const { color, title, subtitle, price, id } = Astro.props;
+const { color, title, subtitle, price, id, pt, textSize } = Astro.props;
 const textColor = `text-${color}`;
 ---
 
@@ -13,7 +13,7 @@ const textColor = `text-${color}`;
       {
         title && (
           <header>
-            <h2 class={`${textColor} pt-40 text-[40px] font-medium`}>
+            <h2 class={`${textColor} ${pt} ${textSize} font-medium`}>
               {title}
             </h2>
             <p class={`${textColor} text-[22px]`}>{subtitle}</p>
@@ -23,11 +23,11 @@ const textColor = `text-${color}`;
       }
     </>
 
-    <main class="flex flex-col items-center justify-center h-full">
+    <main class="flex flex-col items-center justify-center h-screen">
       <slot name="main" />
     </main>
 
-    <footer class="flex flex-col flex-grow items-center justify-end pb-20">
+    <footer class="flex flex-col flex-grow items-center justify-end pb-auto">
       <slot name="footer" />
     </footer>
   </div>

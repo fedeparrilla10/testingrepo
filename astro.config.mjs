@@ -5,6 +5,6 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://astronaut.github.io',
-  base: '/revolution5pro',
+  site: 'https://fedeparrilla10.github.io',
+  base: '/testingrepo',
 });

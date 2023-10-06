@@ -1,0 +1,48 @@
+---
+import Section from './Section.astro';
+---
+
+<Section>
+  <article
+    slot="main"
+    class="text-gray-200 flex flex-col xl:flex-row items-center justify-center"
+  >
+    <div
+      class="flex flex-col lg:flex-row gap-10 2xl:gap-12 justify-center items-center xl:pt-12"
+    >
+      <div class="flex flex-col gap-2 xl:gap-4 max-w-6xl">
+        <h2
+          class="text-[32px] xl:text-[40px] font-bold tracking-widest text-gray-300 underline underline-offset-8"
+        >
+          Personalización TOTAL
+        </h2>
+        <p class="text-xl">
+          Cuatro perfiles guardados por plataforma, tres sets de pesos, tres
+          tamaños de joystick, tres sets de cabezales de joystick, una entrada
+          de micro externo y no menos de sesenta opciones de personalización
+        </p>
+      </div>
+      <video
+        loop
+        autoplay
+        muted
+        src="/testingrepo/customization.mp4"
+        class="w:1/2 md:w-2/4 rounded-3xl"></video>
+    </div>
+  </article>
+
+  <div slot="footer" class="pb-10">
+    <a
+      class="border-[3px] backdrop-blur-sm text-sm rounded font-medium text-white px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors"
+      href="#"
+    >
+      COMPRAR AHORA</a
+    >
+  </div>
+
+  <div
+    slot="background"
+    class="bg-gradient-to-r from-zinc-950 to-zinc-900 object-center object-cover h-full w-full"
+  >
+  </div>
+</Section>

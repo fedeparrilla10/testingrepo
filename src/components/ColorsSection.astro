@@ -4,7 +4,7 @@ import Section from './Section.astro';
 
 <Section
   title="¿CON CUÁL TE QUEDAS?"
-  subtitle="Disponible en dos colores"
+  subtitle="Disponible en dos versiones"
   color="white"
   pt="pt-5 xl:pt-20"
   textSize="text-[36px] xl:text-[40px]"
@@ -14,18 +14,8 @@ import Section from './Section.astro';
     class="text-gray-200 flex flex-col items-center justify-center"
   >
     <div
-      class="w-sm w-3/4 flex flex-col md:flex-row justify-around gap-6 xl:gap-24"
+      class="hidden xl:flex w-sm w-3/4 flex-col md:flex-row justify-around gap-6 xl:gap-24"
     >
-      <img
-        class="max-w-sm lg:max-w-lg xl:max-w-lg object-fit"
-        src="/testingrepo/white2.png"
-        alt=""
-      />
-      <img
-        class="max-w-sm lg:max-w-lg xl:max-w-lg object-fit"
-        src="/testingrepo/black2.png"
-        alt=""
-      />
     </div>
   </article>
 
@@ -36,14 +26,19 @@ import Section from './Section.astro';
     >
       COMPRAR AHORA</a
     >
-    <!-- <p class="mt-2 text-gray-100 text-sm">
-      * Incluye 0,08€ por la <a class="underline" href="#">ecopart</a>
-    </p> -->
   </div>
 
-  <div
+  <!-- <video
     slot="background"
-    class="bg-gradient-to-r from-gray-950 to-zinc-950 object-center object-cover h-full w-full"
-  >
-  </div>
+    loop
+    autoplay
+    muted
+    src="/testingrepo/colors.mp4"
+    class="object-center object-cover h-full w-full hidden xl:block"></video> -->
+
+  <img
+    slot="background"
+    src="/testingrepo/colorsbg.png"
+    class="object-center object-cover h-full w-full"
+  />
 </Section>

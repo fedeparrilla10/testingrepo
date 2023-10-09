@@ -1,6 +1,6 @@
 ---
 import Section from './Section.astro';
-import { textColumns } from '../data/innovation-section.js';
+import { secondSectionData, secondSectionImg } from '../data/second_section.js';
 ---
 
 <Section color="white">
@@ -15,7 +15,7 @@ import { textColumns } from '../data/innovation-section.js';
         class="flex flex-col gap-4 2xl:gap-12 order-2 max-w-6xl justify-center items-center xl:pt-12"
       >
         {
-          textColumns.map((eachColumn) => {
+          secondSectionData.map((eachColumn) => {
             return (
               <div class="flex flex-col gap-2 xl:gap-4">
                 <h2 class="text-[30px] xl:text-[40px] font-bold tracking-widest text-gray-300">
@@ -28,12 +28,17 @@ import { textColumns } from '../data/innovation-section.js';
         }
       </div>
 
-      <img
-        class="object-cover sm:max-w-sm lg:max-w-md xl:max-w-xl order-1 pl-8 hidden lg:block"
-        src="/testingrepo/innovationsection.png"
-        ''
-        alt="Mando Revolution 5 PRO"
-      />
+      {
+        secondSectionImg.map((img) => {
+          return (
+            <img
+              class="object-cover sm:max-w-sm lg:max-w-md xl:max-w-xl order-1 pl-8 hidden lg:block"
+              src={img.src}
+              alt={img.alt}
+            />
+          );
+        })
+      }
     </div>
   </article>
 

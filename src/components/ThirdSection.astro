@@ -1,5 +1,6 @@
 ---
 import Section from './Section.astro';
+import { thirdSectionData } from '../data/third_section.js';
 ---
 
 <Section
@@ -22,11 +23,17 @@ import Section from './Section.astro';
   <div slot="footer" class="pb-10">
     <a
       class="border-[3px] backdrop-blur-sm text-sm rounded font-medium text-white px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors"
-      href="#"
+      href="#buysection"
     >
       COMPRAR AHORA</a
     >
   </div>
+
+  <img
+    slot="background"
+    src={thirdSectionData.background}
+    class="object-center object-cover h-full w-full"
+  />
 
   <!-- <video
     slot="background"
@@ -35,10 +42,4 @@ import Section from './Section.astro';
     muted
     src="/testingrepo/colors.mp4"
     class="object-center object-cover h-full w-full hidden xl:block"></video> -->
-
-  <img
-    slot="background"
-    src="/testingrepo/colorsbg.png"
-    class="object-center object-cover h-full w-full"
-  />
 </Section>

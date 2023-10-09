@@ -1,5 +1,6 @@
 ---
 import Section from './Section.astro';
+import { videoData } from '../data/video';
 ---
 
 <Section>
@@ -14,19 +15,17 @@ import Section from './Section.astro';
         <h2
           class="text-[32px] xl:text-[40px] font-bold tracking-widest text-gray-300 underline underline-offset-8"
         >
-          Tecnología Hall-Effect
+          {videoData[0].title}
         </h2>
         <p class="text-xl">
-          Los joysticks y gatillos cuentan con una precisión y una durabilidad
-          muy mejoradas gracias a la tecnología magnética, que elimina la
-          desviación de los joysticks
+          {videoData[0].description}
         </p>
       </div>
       <video
         loop
         autoplay
         muted
-        src="/testingrepo/analog.mp4"
+        src={videoData[0].src}
         class="w:1/2 md:w-2/4 rounded-3xl"></video>
     </div>
   </article>
@@ -34,7 +33,7 @@ import Section from './Section.astro';
   <div slot="footer" class="pb-10">
     <a
       class="border-[3px] backdrop-blur-sm text-sm rounded font-medium text-white px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors"
-      href="#"
+      href="#buysection"
     >
       COMPRAR AHORA</a
     >

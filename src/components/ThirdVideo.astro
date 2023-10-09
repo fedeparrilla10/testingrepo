@@ -1,5 +1,6 @@
 ---
 import Section from './Section.astro';
+import { videoData } from '../data/video';
 ---
 
 <Section>
@@ -14,19 +15,17 @@ import Section from './Section.astro';
         <h2
           class="text-[32px] xl:text-[40px] font-bold tracking-widest text-gray-300 underline underline-offset-8"
         >
-          Personalización TOTAL
+          {videoData[2].title}
         </h2>
         <p class="text-xl">
-          Cuatro perfiles guardados por plataforma, tres sets de pesos, tres
-          tamaños de joystick, tres sets de cabezales de joystick, una entrada
-          de micro externo y no menos de sesenta opciones de personalización
+          {videoData[2].description}
         </p>
       </div>
       <video
         loop
         autoplay
         muted
-        src="/testingrepo/customization.mp4"
+        src={videoData[2].src}
         class="w:1/2 md:w-2/4 rounded-3xl"></video>
     </div>
   </article>
@@ -34,7 +33,7 @@ import Section from './Section.astro';
   <div slot="footer" class="pb-10">
     <a
       class="border-[3px] backdrop-blur-sm text-sm rounded font-medium text-white px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors"
-      href="#"
+      href="#buysection"
     >
       COMPRAR AHORA</a
     >

@@ -1,3 +1,26 @@
+export const specsImgs = [
+  {
+    id: 1,
+    name: 'Conectividad Dual',
+    img: '/testingrepo/wireless.svg',
+  },
+  {
+    id: 2,
+    name: 'Personalización',
+    img: '/testingrepo/custom.svg',
+  },
+  {
+    id: 3,
+    name: 'Hall Effect',
+    img: '/testingrepo/alleffect.svg',
+  },
+  {
+    id: 4,
+    name: 'Trigger Blocker',
+    img: '/testingrepo/trigger.svg',
+  },
+];
+
 export const firstTable = [
   {
     title: 'Acoplamiento al oído',

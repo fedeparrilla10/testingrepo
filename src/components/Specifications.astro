@@ -1,20 +1,35 @@
 ---
 import LongSection from './LongSection.astro';
-import { firstTable, secondTable } from '../data/specifications.js';
+import { specsImgs, firstTable, secondTable } from '../data/specifications.js';
 ---
 
 <LongSection
   title="ESPECIFICACIONES"
   subtitle="Detalles técnicos"
-  color="white"
+  color="black"
   pt="pt-10"
   textSize="text-[40px]"
 >
   <article
     slot="main"
-    class="text-white flex flex-col items-center justify-center gap-10 w-screen"
+    class="text-black flex flex-col items-center justify-center gap-10 w-screen"
   >
-    <div class="flex justify-around flex-wrap gap-5 text-gray-200 text-md p-10">
+    <div class="hidden xl:flex flex-col md:flex-row gap-10">
+      {
+        specsImgs.map((spec) => {
+          return (
+            <div class="flex flex-col justify-center items-center gap-5">
+              <img src={spec.img} alt={spec.name} class="w-14 h-14" />
+              <p class="text-sm">{spec.name}</p>
+            </div>
+          );
+        })
+      }
+    </div>
+
+    <div
+      class="flex flex-col xl:flex-row items-center justify-around gap-5 text-gray-900 text-md p-10"
+    >
       <div class="table-1">
         <table class="table-auto">
           <tbody>
@@ -22,10 +37,10 @@ import { firstTable, secondTable } from '../data/specifications.js';
               firstTable.map((table) => {
                 return (
                   <tr>
-                    <td class="border border-gray-200 p-1 2xl:p-2 font-bold max-w-sm max-h-2xl">
+                    <td class="border border-gray-900 p-1 2xl:p-2 font-bold max-w-sm max-h-2xl">
                       {table.title}
                     </td>
-                    <td class="border border-gray-200 p-1 2xl:p-2 max-w-sm max-h-2xl">
+                    <td class="border border-gray-900 p-1 2xl:p-2 max-w-sm max-h-2xl">
                       {table.description}
                     </td>
                   </tr>
@@ -42,10 +57,10 @@ import { firstTable, secondTable } from '../data/specifications.js';
               secondTable.map((table) => {
                 return (
                   <tr>
-                    <td class="border border-gray-200 p-1 2xl:p-2 font-bold max-w-sm max-h-2xl">
+                    <td class="border border-gray-900 p-1 2xl:p-2 font-bold max-w-sm max-h-2xl">
                       {table.title}
                     </td>
-                    <td class="border border-gray-200 p-1 2xl:p-2 max-w-sm max-h-2xl">
+                    <td class="border border-gray-900 p-1 2xl:p-2 max-w-sm max-h-2xl">
                       {table.description}
                     </td>
                   </tr>
@@ -60,7 +75,7 @@ import { firstTable, secondTable } from '../data/specifications.js';
 
   <div slot="footer" class="pb-10">
     <a
-      class="border-[3px] backdrop-blur-sm text-sm rounded font-medium text-white px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors"
+      class="border-[3px] border-black font-bold backdrop-blur-sm text-sm rounded text-black px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors"
       href="#buysection"
     >
       COMPRAR AHORA</a
@@ -69,7 +84,7 @@ import { firstTable, secondTable } from '../data/specifications.js';
 
   <div
     slot="background"
-    class="bg-gradient-to-r from-zinc-950 to-zinc-800 object-center object-cover h-full w-full"
+    class="bg-gray-300 object-center object-cover h-full w-full"
   >
   </div>
 </LongSection>

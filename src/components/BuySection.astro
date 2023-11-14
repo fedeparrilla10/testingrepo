@@ -1,15 +1,11 @@
 ---
 import LongSection from './LongSection.astro';
-import {
-  buySectionData,
-  buySectionStores,
-  productData,
-} from '../data/buy_section';
+import { buySectionData, productData } from '../data/buy_section';
 ---
 
 <LongSection
-  title="RIG 800 PRO"
-  subtitle="¡Hazte con ellos en tu tienda favorita!"
+  title="REVOLUTION 5 PRO"
+  subtitle="¡Hazte con él en tu tienda favorita!"
   color="white"
   pt="pt-10"
   textSize="text-[40px]"
@@ -24,12 +20,15 @@ import {
     >
       {
         productData.map((product) => (
-          <div class="flex flex-col items-center justify-center bg-gradient-to-r from-zinc-950 to-zinc-900 rounded-2xl p-5 gap-10">
+          <div class="flex flex-col items-center justify-center bg-gradient-to-r from-zinc-950 to-zinc-900 rounded-2xl p-5 gap-5">
             <img src={product.imgSrc} alt={product.title} class="w-72" />
             <p class="text-xl font-bold tracking-wider">{product.title}</p>
             <div class="flex flex-row gap-10">
-              {buySectionStores.map((store) => (
-                <a href="#" class="flex items-center justify-center gap-2">
+              {product.buySectionStores.map((store) => (
+                <a
+                  href={store.link}
+                  class="flex items-center justify-center gap-2"
+                >
                   <img src={store.src} alt={store.name} class="w-16" />
                 </a>
               ))}
@@ -45,7 +44,9 @@ import {
       class="flex flex-col md:flex-row justify-center md:justify-between items-center gap-5"
     >
       <div class="flex flex-row gap-2">
-        <a href="#">
+        <a
+          href="https://www.facebook.com/Nacongaming/?brand_redir=618785068327460"
+        >
           <img
             src="/testingrepo/facebook.svg"
             alt="Facebook"
@@ -53,7 +54,7 @@ import {
           />
         </a>
 
-        <a href="#">
+        <a href="https://www.instagram.com/nacongamers_es/?hl=es">
           <img
             src="/testingrepo/instagram.svg"
             alt="Instagram"
@@ -61,11 +62,11 @@ import {
           />
         </a>
 
-        <a href="#">
+        <a href="https://twitter.com/NacongamingES?">
           <img src="/testingrepo/x.svg" alt="Twitter" class="w-8 md:w-10" />
         </a>
 
-        <a href="#">
+        <a href="https://www.youtube.com/@NacongamingEspana">
           <img
             src="/testingrepo/youtube.svg"
             alt="YouTube"

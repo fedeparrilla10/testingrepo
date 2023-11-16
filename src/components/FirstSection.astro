@@ -4,7 +4,7 @@ import { firstSectionData } from '../data/first_section.js';
 ---
 
 <Section>
-  <article slot="main" class="flex justify-center items-center flex-col gap-10">
+  <article slot="main" class="flex justify-center items-center flex-col gap-0">
     {
       firstSectionData.map((data) => {
         return (
@@ -12,10 +12,11 @@ import { firstSectionData } from '../data/first_section.js';
             <h1 class="text-[42px] font-bolder">{data.title}</h1>
             <div class="flex items-center justify-center flex-col">
               <img
-                class="pl-5"
-                src={data.firstImg.src}
+                src={data.mainImg.src}
                 alt="Compatible con PS5, PS4 y PC"
+                class="w-32"
               />
+              <img src={data.firstImg.src} alt="Compatible con PS5, PS4 y PC" />
               <img
                 class="md:max-w-md lg:max-w-lg xl:max-w-2xl"
                 src={data.secondImg.src}

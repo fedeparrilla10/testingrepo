@@ -16,6 +16,18 @@ export const productData = [
         src: '/testingrepo/game.png',
         link: 'https://www.game.es/mando-revolution-5-pro-negro-playstation-5-224299',
       },
+      {
+        id: 2,
+        name: 'FNAC',
+        src: '/testingrepo/fnac.png',
+        link: 'https://www.fnac.es/Mando-Nacon-Revolution-5-Pro-Negro-PS5-Accesorio-Videoconsola-Mando-consola/a10472502#omnsearchpos=2',
+      },
+      {
+        id: 3,
+        name: 'El Corte Inglés',
+        src: '/testingrepo/corteinglés.png',
+        link: 'https://www.elcorteingles.es/videojuegos/A49619323-mando-revolution-5-pro-nacon/?parentProduct=A49619323&parentCategoryId=999.37144404013',
+      },
     ],
   },
   {
@@ -27,9 +39,21 @@ export const productData = [
     buySectionStores: [
       {
         id: 1,
-        name: 'Coming Soon',
-        src: '/testingrepo/coming-soon.png',
-        link: '#',
+        name: 'Game',
+        src: '/testingrepo/game.png',
+        link: 'https://www.game.es/mando-revolution-5-pro-blanco-playstation-5-224300',
+      },
+      {
+        id: 2,
+        name: 'FNAC',
+        src: '/testingrepo/fnac.png',
+        link: 'https://www.fnac.es/Mando-Nacon-Revolution-5-Pro-Blanco-PS5-Accesorio-Videoconsola-Mando-consola/a10472503#omnsearchpos=1',
+      },
+      {
+        id: 3,
+        name: 'El Corte Inglés',
+        src: '/testingrepo/corteinglés.png',
+        link: 'https://www.elcorteingles.es/videojuegos/A49619324-mando-revolution-5-pro-nacon/?stype=text_box&parentCategoryId=999.51648013&color=default',
       },
     ],
   },

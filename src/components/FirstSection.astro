@@ -1,9 +1,10 @@
 ---
 import Section from './Section.astro';
 import { firstSectionData } from '../data/first_section.js';
+import LongSection from './LongSection.astro';
 ---
 
-<Section>
+<LongSection>
   <article slot="main" class="flex justify-center items-center flex-col gap-0">
     {
       firstSectionData.map((data) => {
@@ -17,11 +18,20 @@ import { firstSectionData } from '../data/first_section.js';
                 class="w-32"
               />
               <img src={data.firstImg.src} alt="Compatible con PS5, PS4 y PC" />
-              <img
-                class="md:max-w-md lg:max-w-lg xl:max-w-2xl"
-                src={data.secondImg.src}
-                alt="Mando Revolution 5 PRO"
-              />
+              <div class="flex items-center flex-col xl:flex-row">
+                <img
+                  class="md:max-w-md lg:max-w-lg xl:max-w-2xl"
+                  src={data.secondImg.src}
+                  alt="Mando Revolution 5 PRO"
+                />
+                <iframe
+                  class="xl:w-[600px] xl:h-[400px] w-full h-64"
+                  width="560"
+                  height="400"
+                  src="https://www.youtube.com/embed/QiSU834mchw"
+                  allowfullscreen
+                />
+              </div>
             </div>
           </>
         );
@@ -29,7 +39,7 @@ import { firstSectionData } from '../data/first_section.js';
     }
   </article>
 
-  <div slot="footer" class="pb-10">
+  <div slot="footer" class="py-10">
     <a
       class="border-[3px] border-black font-bold backdrop-blur-sm text-sm rounded text-black px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors"
       href="#buysection"
@@ -43,4 +53,4 @@ import { firstSectionData } from '../data/first_section.js';
     class="bg-gray-300 object-center object-cover h-full w-full"
   >
   </div>
-</Section>
+</LongSection>

@@ -38,7 +38,13 @@ export const videoData = [
   {
     title: 'Aplicación Propia',
     description:
-      'Cuatro perfiles guardados por plataforma, tres sets de pesos, tres tamaños de joystick, tres sets de cabezales de joystick, una entrada de micro externo y no menos de 60 opciones de personalización',
+      'Personaliza de manera avanzada el mando gracias a la aplicación exclusiva de Nacon. Cambia audio, iluminación y hasta la sensibilidad de los botones.',
     src: '/testingrepo/aplicacion.mp4',
+  },
+  {
+    title: 'Un Equilibrio Perfecto',
+    description:
+      'Equilibrio perfecto y resistencia incomparable: un mando diseñado con peso balanceado y componentes ultra duraderos Omron®.',
+    src: '/testingrepo/equilibrio.mp4',
   },
 ];
